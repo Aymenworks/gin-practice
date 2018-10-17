@@ -1,4 +1,8 @@
 {{ template "header.html" .}}
-  <h1>Hello Aymen!</h1>
-  
+  <h1>{{ .title }}</h1>
+
+  <h2>Articles</h2>
+  {{ range .articles }}
+    <a href="/articles/view/{{.ID}}">{{.Title}}</a>
+  {{end}}
 {{ template "footer.html" .}}
